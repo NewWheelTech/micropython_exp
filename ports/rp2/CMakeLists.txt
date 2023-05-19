@@ -65,9 +65,13 @@ endif()
 string(CONCAT GIT_SUBMODULES "${GIT_SUBMODULES} " lib/mbedtls)
 string(CONCAT GIT_SUBMODULES "${GIT_SUBMODULES} " lib/tinyusb)
 
+
+
 # Include component cmake fragments
 include(${MICROPY_DIR}/py/py.cmake)
 include(${MICROPY_DIR}/extmod/extmod.cmake)
+
+set(PICO_PLL_VCO_MIN_FREQ_MHZ  400)
 include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
 
 # Define the top-level project
