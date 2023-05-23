@@ -372,6 +372,7 @@ target_include_directories(${MICROPY_TARGET} PRIVATE
 target_compile_options(${MICROPY_TARGET} PRIVATE
     -Wall
     -Werror
+    -DPICO_PLL_VCO_MIN_FREQ_MHZ=400
 )
 
 target_link_options(${MICROPY_TARGET} PRIVATE
