@@ -389,7 +389,7 @@ set_source_files_properties(
     ${PICO_TINYUSB_PATH}/src/portable/raspberrypi/rp2040/dcd_rp2040.c
     ${PICO_TINYUSB_PATH}/src/portable/raspberrypi/rp2040/rp2040_usb.c
     PROPERTIES
-    COMPILE_OPTIONS "-Wno-error=array-bounds;-Wno-error=unused-but-set-variable"
+    COMPILE_OPTIONS "-Wno-error=array-bounds;-Wno-error=unused-but-set-variable;-DPICO_PLL_VCO_MIN_FREQ_MHZ=400"
 )
 
 target_compile_definitions(${MICROPY_TARGET} PRIVATE
