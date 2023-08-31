@@ -73,16 +73,6 @@ include(${MICROPY_DIR}/py/py.cmake)
 include(${MICROPY_DIR}/extmod/extmod.cmake)
 include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
 
-file(COPY ${MICROPY_DIR}/pimoroni-pico/common DESTINATION ${MICROPY_DIR}/ports/rp2)
-file(COPY ${MICROPY_DIR}/pimoroni-pico/libraries/bitmap_fonts DESTINATION ${MICROPY_DIR}/ports/rp2)
-file(COPY ${MICROPY_DIR}/pimoroni-pico/libraries/hershey_fonts DESTINATION ${MICROPY_DIR}/ports/rp2)
-file(COPY ${MICROPY_DIR}/pimoroni-pico/libraries/pico_graphics DESTINATION ${MICROPY_DIR}/ports/rp2)
-
-add_subdirectory(${MICROPY_DIR}/ports/rp2/common)
-
-add_subdirectory(${MICROPY_DIR}/ports/rp2/bitmap_fonts)
-add_subdirectory(${MICROPY_DIR}/ports/rp2/hershey_fonts)
-add_subdirectory(${MICROPY_DIR}/ports/rp2/pico_graphics)
 
 # Define the top-level project
 project(${MICROPY_TARGET})
