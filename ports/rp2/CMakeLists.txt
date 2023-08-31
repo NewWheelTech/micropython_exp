@@ -66,6 +66,7 @@ endif()
 # Necessary submodules for all boards.
 string(CONCAT GIT_SUBMODULES "${GIT_SUBMODULES} " lib/mbedtls)
 string(CONCAT GIT_SUBMODULES "${GIT_SUBMODULES} " lib/tinyusb)
+string(CONCAT GIT_SUBMODULES "${GIT_SUBMODULES} " pimoroni-pico)
 
 # Include component cmake fragments
 include(${MICROPY_DIR}/py/py.cmake)
